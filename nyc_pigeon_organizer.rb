@@ -4,6 +4,8 @@ def nyc_pigeon_organizer(data)
     value. each do |x,y|
       y.each do |name|
         haxh[name]= {:color => [], :gender => [], :lives => []}
-        
+      end
+    end
+  end
       
 end
