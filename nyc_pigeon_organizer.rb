@@ -1,9 +1,9 @@
 def nyc_pigeon_organizer(data)
-  new_pigeon_data = {}
+  haxh = {}
    data.each do |birds, info|
     info.each do |attribute, names|
       names.each do |name|
-        new_pigeon_data[name] = {:color => [], :gender => [], :lives => []}  
+        haxh[name] = {:color => [], :gender => [], :lives => []}  
       end
     end
   end
@@ -28,5 +28,5 @@ def nyc_pigeon_organizer(data)
       end
     end
   end
-  new_pigeon_data
+  haxh
 end
