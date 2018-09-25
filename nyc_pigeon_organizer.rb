@@ -37,30 +37,30 @@ def nyc_pigeon_organizer(data)
    data.each do |key, value|
     value.each do |x,y|
       y.each do |name|
-        new_pigeon_data[name] = {:color => [], :gender => [], :lives => []}  #establish top tier
+        haxh[name] = {:color => [], :gender => [], :lives => []}
       end
     end
   end
-  data[:color].each do |attribute, name_array|
-    name_array.each do |name|
-      if data[:color][attribute].include?(name)
-        new_pigeon_data[name][:color] << attribute.to_s
+  data[:color].each do |key,value|
+    value.each do |name|
+      if data[:color][key].include?(name)
+        haxh[name][:color] << key.to_s
       end
     end
   end
-  data[:gender].each do |attribute, name_array|
-    name_array.each do |name|
-      if data[:gender][attribute].include?(name)
-        new_pigeon_data[name][:gender] << attribute.to_s
+  data[:gender].each do |key,value|
+    value.each do |name|
+      if data[:gender][key].include?(name)
+        haxh[name][:gender] << key.to_s
       end
     end
   end
-  data[:lives].each do |attribute, name_array|
-    name_array.each do |name|
-      if data[:lives][attribute].include?(name)
-        new_pigeon_data[name][:lives] << attribute
+  data[:lives].each do |key,value|
+    value.each do |name|
+      if data[:lives][key].include?(name)
+        new_pigeon_data[name][:lives] << key
       end
     end
   end
-  new_pigeon_data
+  haxh
 end
