@@ -10,7 +10,7 @@ def nyc_pigeon_organizer(data)
   end
     data[:color].each do |key,value|
       value.each do |name|
-        if name[key].include?(name)
+        if .include?(name)
           haxh[name][:color] << key.to._s
         end
       end
