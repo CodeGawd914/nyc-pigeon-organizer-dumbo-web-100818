@@ -8,7 +8,7 @@ def nyc_pigeon_organizer(data)
       end
     end
   end
-    data[:gender].each do |key,value|
+    data[:color].each do |key,value|
       value.each do |name|
         if name[key].include?
 end
