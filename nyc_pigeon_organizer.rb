@@ -15,5 +15,19 @@ def nyc_pigeon_organizer(data)
         end
       end
     end
+    data[:gender].each do |key,value|
+      value.each do |gender|
+        if data[:gender][key].include?(gender)
+          haxh[gender][:gender] << key.to_s
+        end
+      end
+    end
+    data[:lives].each do |key,value|
+      value.each do |place|
+        if data[:lives][key].include?(place)
+          haxh[place][:lives] << key.to_s
+        end
+      end
+    end
     haxh
 end
