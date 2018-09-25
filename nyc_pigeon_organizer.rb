@@ -7,15 +7,15 @@ def nyc_pigeon_organizer(data)
       end
     end
   end
-  data[:color].each do |attribute, name_array|
-    name_array.each do |name|
+  data[:color].each do |attribute, names|
+    names.each do |name|
       if data[:color][attribute].include?(name)
         haxh[name][:color] << attribute.to_s
       end
     end
   end
-  data[:gender].each do |attribute, name_array|
-    name_array.each do |name|
+  data[:gender].each do |attribute, names|
+    names.each do |name|
       if data[:gender][attribute].include?(name)
         haxh[name][:gender] << attribute.to_s
       end
